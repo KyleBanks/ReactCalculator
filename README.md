@@ -1,5 +1,9 @@
 # ReactCalculator
 
+<div style="text-align:center;">
+  <img src="https://kylewbanks.com/images/post/react-native-tutorial-cover.png" alt="React Native Tutorial" />
+</div>
+
 A React Native tutorial where you'll write a calculator app for Android and iOS.
 
 The tutorial is broken up into three parts:
