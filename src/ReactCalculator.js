@@ -62,11 +62,12 @@ class ReactCalculator extends Component {
                     <InputButton
                         value={input}
                         highlight={this.state.selectedSymbol === input}
-                        onPress={this._onInputButtonPressed.bind(this, input)}/>
+                        onPress={this._onInputButtonPressed.bind(this, input)}
+                        key={r + "-" + i}/>
                 );
             }
 
-            views.push(<View style={Style.inputRow}>{inputRow}</View>)
+            views.push(<View style={Style.inputRow} key={"row-" + r}>{inputRow}</View>)
         }
 
         return views;
