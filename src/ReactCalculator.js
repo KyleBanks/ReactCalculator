@@ -20,7 +20,8 @@ const inputButtons = [
     [1, 2, 3, '/'],
     [4, 5, 6, '*'],
     [7, 8, 9, '-'],
-    [0, '.', '=', '+']
+    [0, '.', '=', '+'],
+    ['c', 'ce']
 ];
 
 class ReactCalculator extends Component {
@@ -28,11 +29,13 @@ class ReactCalculator extends Component {
     constructor(props) {
         super(props);
 
-        this.state = {
+        this.initialState = {
             previousInputValue: 0,
             inputValue: 0,
             selectedSymbol: null
-        }
+        };
+
+        this.state = this.initialState;
     }
 
     render() {
@@ -118,6 +121,14 @@ class ReactCalculator extends Component {
                     selectedSymbol: null
                 });
                 break;
+
+            case 'ce':
+                this.setState(this.initialState);
+                    break;
+            case 'c':
+                this.setState({inputValue: 0});
+                break;
+
         }
     }
 
